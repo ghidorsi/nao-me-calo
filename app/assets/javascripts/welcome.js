@@ -6,8 +6,8 @@ var map;
 function initAutocomplete () {
   var mapField = $('#map')[0]
   map = new google.maps.Map(mapField, {
-    center: {lat: -30.0277, lng: -51.2287},
-    zoom: 12
+    center: {lat: -10.254450, lng: -48.324275},
+    zoom: 3
   });
 
   initMap();
@@ -139,6 +139,7 @@ function initAutocomplete () {
         };
 
         map.setCenter(pos);
+        map.setZoom(12);
       }, function() {
         handleLocationError(true, infoWindow, map.getCenter());
       });
@@ -186,6 +187,10 @@ function initAutocomplete () {
 
 
   $(document).ready(function(){
+
+    $.get('/',{
+      success: console.log(":}")
+    });
 
     $('#text-without-javascript').hide();
     $('#bestPlacesButton').addClass('Order-btn-pressed');

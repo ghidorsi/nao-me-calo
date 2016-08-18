@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   get '/avaliar' => 'ratings#new'
 
+  get '/teste' => 'welcome#teste'
+
   get '/termos' => 'welcome#terms'
 
   get '/ranking' => 'establishments#ranking', format: :js

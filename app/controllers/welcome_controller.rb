@@ -22,8 +22,15 @@ class WelcomeController < ApplicationController
     end
     @share_text = "Confira o ranking dos estabelecimentos mais ou menos amigáveis para grupos oprimidos"
 
-    @worst_places = generate_ranking.take(5)
-    @best_places = generate_ranking.reverse.take(5)
+    @places = generate_ranking.reverse
+
+    respond_to do |format|
+      if request.xhr?
+        format.js
+      else
+        format.html
+      end
+    end
   end
 
   def search
