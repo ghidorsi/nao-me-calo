@@ -188,9 +188,8 @@ function initAutocomplete () {
 
   $(document).ready(function(){
 
-    $.get('/',{
-      success: console.log(":}")
-    });
+    var city = "";
+    var type = "good";
 
     $('#text-without-javascript').hide();
     $('#bestPlacesButton').addClass('Order-btn-pressed');
@@ -204,6 +203,7 @@ function initAutocomplete () {
     checkMobileEnhanceButtons();
     hideMapIfIsMobile();
     changingTopOfFlagWhenIsMobile();
+    sendAjaxRequestForRanking();
 
     function hideMapIfIsMobile(){
       if(isMobile.matches){
@@ -216,6 +216,12 @@ function initAutocomplete () {
       if(isMobile.matches){
         $('.concept:before').css("top", "36px");
       }
+    }
+
+    function sendAjaxRequestForRanking(){
+      $.get('/?city=' + city + "&type=" + type,{
+        success: console.log(":}")
+      });
     }
 
     var actualFontSize = 14
@@ -235,20 +241,6 @@ function initAutocomplete () {
     function activeWorstButton(){
       $(".ranking-worst").addClass("ranking-worst-active");
       $(".ranking-best").removeClass("ranking-best-active");
-    }
-
-    function switchListBest(){
-      if($('#bottom5').is(":visible")){
-        $('#top5').show();
-        $('#bottom5').hide();
-      }
-    }
-
-    function switchListWorst(){
-      if($("#top5").is(":visible")){
-        $('#top5').hide();
-        $('#bottom5').show();
-      }
     }
 
     function lowerFontSize(){
@@ -290,6 +282,8 @@ function initAutocomplete () {
     }
 
     $("#bestPlacesButton").click(function(){
+      type = "good";
+      sendAjaxRequestForRanking();
       $(this).addClass('Order-btn-pressed');
       $(this).css('font-size', '145%');
       $('#worstPlacesButton').removeClass('Order-btn-pressed');
@@ -298,6 +292,8 @@ function initAutocomplete () {
     });
 
     $("#worstPlacesButton").click(function(){
+      type = "bad";
+      sendAjaxRequestForRanking();
       $(this).addClass('Order-btn-pressed');
       $(this).css('font-size', '145%');
       $('#bestPlacesButton').removeClass('Order-btn-pressed');
