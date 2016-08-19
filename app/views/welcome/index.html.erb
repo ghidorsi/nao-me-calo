@@ -71,57 +71,55 @@
     </div>
   </div>
   <div class="col-md-5 col-lg-offset-1">
+    <div align="center" class="row paragraph order-space h4 text-bold">
+        Ranking Nacional
+    </div>
     <div class="buttons">
-      <div align="center" class="row paragraph order-space">
-        Ordenar ranking por:
-      </div>
       <div align="center" class="ranking-buttons row paragraph">
-        <a name="ranking" id='bestPlacesButton' ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Melhores</a>
+        <a name="ranking" id='bestPlacesButton' ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Melhores Estabelecimentos</a>
         <span> | </span>
-        <a id='worstPlacesButton' >Piores <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></a>
-
+        <a id='worstPlacesButton' >Piores Estabelecimentos <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></a>
         </div>
       </div>
       <div class="col-md-12" id="listRankingHome">
-
       </div>
-            <div id="link-to-ranking">
-              <%= link_to "Ver ranking completo", ranking_path %>
-            </div>
+      <div id="link-to-ranking">
+        <%= link_to "Ver Ranking completo/Ranking por cidade", ranking_path %>
+      </div>
+    </div>
+
+    <a name="mapa" >
+
+      <div class="row" id="map-mobile">
+        <div class="col-md-5 mapa">
+          <div class="row">
+            <div class="col-md-8">
+              <input id="map_search" type="text" class="form-control" aria-label="Busque um local"  placeholder="Busque um local" >
+            </input>
           </div>
+        </div>
+      </a>
+      <div class="map">
+        <div class="map-title hidden-xs">
+          Utilize o mapa para encontrar locais já avaliados
+        </div>
+        <div id="map" class="hidden-xs visible-lg visible-md visible-sm">map</div>
+      </div>
+      <p class="text-bold hidden-xs visible-lg visible-md visible-sm">
+        <div class="col-md-12 hidden-xs visible-lg visible-md visible-sm">
+          <span class="legend-map legend-map-dangerous"></span>
+          <span class="text-legend">Péssimo</span>
+          <span class="legend-map legend-map-bad"></span>
+          <span class="text-legend">Ruim</span>
+          <span class="legend-map legend-map-regular"></span>
+          <span class="text-legend">Regular</span>
+          <span class="legend-map legend-map-good"></span>
+          <span class="text-legend">Bom</span>
+          <span class="legend-map legend-map-excellent"></span>
+          <span class="text-legend">Ótimo</span>
+          <!-- <div class="col-md-2" id="bottom5"> -->
+        </p>
+        <!-- </div> -->
+      </div>
 
-          <a name="mapa" >
-
-            <div class="row" id="map-mobile">
-              <div class="col-md-5 mapa">
-                <div class="row">
-                  <div class="col-md-8">
-                    <input id="map_search" type="text" class="form-control" aria-label="Busque um local"  placeholder="Busque um local" >
-                  </input>
-                </div>
-              </div>
-            </a>
-            <div class="map">
-            <div class="map-title hidden-xs">
-              Utilize o mapa para encontrar locais já avaliados
-            </div>
-            <div id="map" class="hidden-xs visible-lg visible-md visible-sm">map</div>
-          </div>
-            <p class="text-bold hidden-xs visible-lg visible-md visible-sm">
-              <div class="col-md-12 hidden-xs visible-lg visible-md visible-sm">
-                <span class="legend-map legend-map-dangerous"></span>
-                <span class="text-legend">Péssimo</span>
-                <span class="legend-map legend-map-bad"></span>
-                <span class="text-legend">Ruim</span>
-                <span class="legend-map legend-map-regular"></span>
-                <span class="text-legend">Regular</span>
-                <span class="legend-map legend-map-good"></span>
-                <span class="text-legend">Bom</span>
-                <span class="legend-map legend-map-excellent"></span>
-                <span class="text-legend">Ótimo</span>
-                <!-- <div class="col-md-2" id="bottom5"> -->
-                </p>
-              <!-- </div> -->
-            </div>
-
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr1tsRiNhjTSSTamqCFMTpIctBJsMbsVA&signed_in=true&libraries=places&callback=initAutocomplete"async defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr1tsRiNhjTSSTamqCFMTpIctBJsMbsVA&signed_in=true&libraries=places&callback=initAutocomplete"async defer></script>

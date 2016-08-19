@@ -12,8 +12,6 @@
   float:right;
 }
 
-
-
 .search-fields{
   border: 1px solid rgba(0, 0, 0, 0.36);
 }
@@ -164,6 +162,12 @@ button.btn.search-inputButton.rate {
   border-radius: 2%;
 }
 
+.city-input{
+  padding: 4% 11% 6% 10%;
+  margin: 1% 1% 1% 12%;
+  border-radius: 2%;
+}
+
 .map {
   margin-top: -35px;
   &-title {
@@ -171,10 +175,6 @@ button.btn.search-inputButton.rate {
     font-style: italic;
     padding-bottom: 15px;
   }
-}
-
-.gmnoprint{
-
 }
 
 .legend-map {

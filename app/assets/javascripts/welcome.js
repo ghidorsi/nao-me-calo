@@ -205,7 +205,6 @@ function initAutocomplete () {
     changingTopOfFlagWhenIsMobile();
     sendAjaxRequestForRanking();
 
-    $('.buttons').css("visibility", "hidden");
 
     function hideMapIfIsMobile(){
       if(isMobile.matches){
@@ -290,7 +289,6 @@ function initAutocomplete () {
       $(this).css('font-size', '145%');
       $('#worstPlacesButton').removeClass('Order-btn-pressed');
       $('#worstPlacesButton').css('font-size', '120%');
-
     });
 
     $("#worstPlacesButton").click(function(){
@@ -302,12 +300,6 @@ function initAutocomplete () {
       $('#bestPlacesButton').css('font-size', '120%');
     });
 
-    $('#bestPlacesButton').click(function(){
-      switchListBest();
-    })
-    $('#worstPlacesButton').click(function(){
-      switchListWorst();
-    })
     $('#placeId').attr('readonly', true)
     $('#placeId2').attr('readonly', true)
 

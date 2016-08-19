@@ -7,11 +7,12 @@
       </div>
 
       <div class="headerDesktop-links" >
-        <ul>
+        <ul class="margin-menu">
           <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", "/", :class => "menu"%></li>
           <li class="<%= 'active' if current_page?(dicas_path) %>"><%= link_to "Apoio Legal", dicas_path, :class => "menu"%></li>
           <li class="<%= 'active' if current_page?(ranking_path) %>"><%= link_to "Ranking", ranking_path, :class => "menu"%></li>
           <li class="<%= 'active' if current_page?(faleconosco_path)%>"><%= link_to "Contato", faleconosco_path, :class => "menu"%></li>
+          <li class="<%= 'active' if current_page?(sobre_nos_path)%>"><%= link_to "Quem somos", sobre_nos_path, :class => "menu"%></li>
         </ul>
       </div>
       <div class="headerDesktop-text">

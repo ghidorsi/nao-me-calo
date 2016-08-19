@@ -4,11 +4,12 @@
       <a href="/"><%= image_tag("logo.png", size: "90x90",:id => "img_logo_site", :alt => "Logo do site, imagem de um megafone com o nome não me calo escrito em frente") %></a>
     </div>
     <div class="headerDesktop-links">
-      <ul>
+      <ul class='margin-menu'>
         <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path, :class => "menu" %></li>
         <li class="<%= 'active' if current_page?(dicas_path) %>"><%= link_to "Apoio Legal", dicas_path, :class => "menu" %></li>
         <li class="<%= 'active' if current_page?(ranking_path) %>"><%= link_to "Ranking", ranking_path, :class => "menu" %></li>
         <li class="<%= 'active' if current_page?(faleconosco_path)%>"><%= link_to "Contato", faleconosco_path, :class => "menu"%></li>
+        <li class="<%= 'active' if current_page?(sobre_nos_path)%>"><%= link_to "Quem somos", sobre_nos_path, :class => "menu"%></li>
       </ul>
     </div>
   </div>

@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get '/faleconosco' => 'contact_us#index'
 
+  get '/sobre_nos' => 'about_us#about_us'
+
   post '/enviar' => 'contact_us#send_mail'
 
   get '/relato/:id' => 'ratings#show'
