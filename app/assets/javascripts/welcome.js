@@ -205,6 +205,8 @@ function initAutocomplete () {
     changingTopOfFlagWhenIsMobile();
     sendAjaxRequestForRanking();
 
+    $('.buttons').css("visibility", "hidden");
+
     function hideMapIfIsMobile(){
       if(isMobile.matches){
         $("#map-mobile").css("display", "none");
