@@ -4,7 +4,7 @@ require 'concept.rb'
 
 class EstablishmentsController < ApplicationController
   before_action :set_establishment, only: [:show, :edit, :update, :destroy, :search]
-  before_action :set_client, only: [:show]
+  before_action :set_client, only: [:show, :create]
 
   def index
     @establishments = Establishment.all
@@ -58,6 +58,9 @@ class EstablishmentsController < ApplicationController
 
   def create
     @establishment = Establishment.new(establishment_params)
+    @spot = @client.spot(@establishment.id_places)
+    @establishment.city = @spot.city
+    @establishment.state = @spot.region
 
     respond_to do |format|
       if @establishment.save
@@ -87,6 +90,6 @@ class EstablishmentsController < ApplicationController
   end
 
   def establishment_params
-    params.require(:establishment).permit(:name, :address, :average_rating, :lat, :lng, :id_places, :city, :city_input_ranking)
+    params.require(:establishment).permit(:name, :address, :average_rating, :lat, :lng, :id_places, :city, :state, :city_input_ranking)
   end
 end

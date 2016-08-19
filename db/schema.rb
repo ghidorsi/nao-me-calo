@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805134555) do
+ActiveRecord::Schema.define(version: 20160819214034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "unaccent"
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160805134555) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "city"
+    t.string   "state"
   end
 
   create_table "ratings", force: :cascade do |t|
