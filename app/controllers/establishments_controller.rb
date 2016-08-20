@@ -38,6 +38,7 @@ class EstablishmentsController < ApplicationController
 
     @worst_places = generate_ranking
     @best_places = @worst_places.reverse
+    @places = @best_places
 
     respond_to do |format|
       if request.xhr?

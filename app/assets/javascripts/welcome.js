@@ -203,7 +203,10 @@ function initAutocomplete () {
     checkMobileEnhanceButtons();
     hideMapIfIsMobile();
     changingTopOfFlagWhenIsMobile();
-    sendAjaxRequestForRanking();
+
+    if(window.location.pathname == "/"){
+      sendAjaxRequestForRanking();
+    }
 
 
     function hideMapIfIsMobile(){
