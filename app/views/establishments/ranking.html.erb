@@ -14,15 +14,17 @@
   </div>
 </div>
 
-<div class="row order-space">
-  Ordenar ranking por:
-</div>
-<div class="ranking-buttons text-center">
-  <a name="ranking" id='bestPlacesButtonRanking' ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Melhores</a>
-  <span> | </span>
-  <a id='worstPlacesButtonRanking' >Piores <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></a>
+<div class="filter">
+  <div class="row order-space">
+    Ordenar ranking por:
   </div>
-<div class="col-lg-8 col-lg-offset-2 col-xs-12 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+  <div class="ranking-buttons text-center">
+    <a name="ranking" id='bestPlacesButtonRanking' ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Melhores</a>
+    <span> | </span>
+    <a id='worstPlacesButtonRanking' >Piores <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></a>
+    </div>
+  </div>
+  <div class="col-lg-8 col-lg-offset-2 col-xs-12 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
     <div id="rankingListAll">
       <%= render 'ranking_list' %>
     </div>
