@@ -35,11 +35,11 @@
   }
 }
 
-.paragraph-ranking{
-  padding-left: 28px;
-}
-
 @media only screen and (max-device-width: 480px) {
+  .paragraph-title{
+    padding-left: 8px;
+  }
+
   .search {
     margin-bottom: 60px;
 

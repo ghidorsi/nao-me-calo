@@ -249,3 +249,9 @@ button.btn.search-inputButton.rate {
   padding-right: 70px;
   padding-bottom: 5px;
 }
+
+@media only screen and (max-device-width: 480px){
+  .paragraph{
+    padding-left: 0px;
+  }
+}
