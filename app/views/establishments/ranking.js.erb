@@ -1,1 +1,7 @@
-$('#rankingListAll').html("<%= escape_javascript render 'ranking_list' %>");
+<% if !@places.empty? %>
+  $('#rankingListAll').html("<%= escape_javascript render 'ranking_list' %>");
+  $('#showMoreRanking').show();
+<% else %>
+  $('#rankingListAll').html("<%= escape_javascript render 'nothing_found' %>");
+  $('#showMoreRanking').hide();
+<% end %>

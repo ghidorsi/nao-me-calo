@@ -2,13 +2,14 @@ $(document).ready(function(){
 
   var region = "";
   var order = "good";
+  var size = 5;
 
   if(window.location.pathname == "/ranking"){
     sendAjaxRequestForRanking();
   }
 
   function sendAjaxRequestForRanking(){
-    $.get('/ranking?order=' + order + "&region=" + region, {
+    $.get('/ranking?order=' + order + "&region=" + region + "&size=" + size, {
       success: console.log(":}")
     });
   }
@@ -18,5 +19,10 @@ $(document).ready(function(){
     sendAjaxRequestForRanking();
     return false;
   });
+
+  $('#showMoreRanking').click(function(){
+    size = size + 5;
+    sendAjaxRequestForRanking();
+  })
 
 });

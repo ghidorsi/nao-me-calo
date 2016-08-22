@@ -40,9 +40,9 @@ class EstablishmentsController < ApplicationController
     @share_text = "Confira o ranking dos estabelecimentos mais ou menos amigáveis para grupos oprimidos"
 
     if params[:order] == "good"
-      @places = generate_ranking.reverse
+      @places = generate_ranking.reverse.take(Integer(params[:size]))
     elsif params[:order] == "bad"
-      @places = generate_ranking
+      @places = generate_ranking.take(Integer(params[:size]))
     end
 
     respond_to do |format|
