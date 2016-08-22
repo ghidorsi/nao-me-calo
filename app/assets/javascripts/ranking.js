@@ -1,9 +1,22 @@
 $(document).ready(function(){
 
-// $("#search-btn").click(function(){
-//   $.get('/ranking', {
-//     search: $('#searchField').val()
-//   });
-//   return false;
-// });
+  var region = "";
+  var order = "good";
+
+  if(window.location.pathname == "/ranking"){
+    sendAjaxRequestForRanking();
+  }
+
+  function sendAjaxRequestForRanking(){
+    $.get('/ranking?order=' + order + "&region=" + region, {
+      success: console.log(":}")
+    });
+  }
+
+  $('#rankingForm').submit(function(){
+    region = $('#searchRanking').val();
+    sendAjaxRequestForRanking();
+    return false;
+  });
+
 });

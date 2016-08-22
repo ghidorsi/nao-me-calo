@@ -4,14 +4,16 @@
   <div align="center" class="row paragraph order-space">
     Pesquisar Ranking por Cidade/Estado:
   </div>
-  <div class="input-group search-Ranking-input">
-    <input type="text" class="form-control search-fields" aria-label="Campo para buscar local para visitar" placeholder="Busque uma cidade/Estado" id="searchField" autofocus="">
-    <span class="input-group-btn">
-      <button type="submit" class="btn search-inputButton get" id="search-btn">
-        <span>Pesquisar</span>
-      </button>
-    </span>
-  </div>
+  <form action="#" id="rankingForm" method="get">
+    <div class="input-group search-Ranking-input">
+      <input type="text" class="form-control search-fields" aria-label="Campo para filtro por região" placeholder="Busque uma cidade/Estado" id="searchRanking" autofocus="">
+      <span class="input-group-btn">
+        <button type="submit" class="btn search-inputButton get" id="search-btn">
+          <span>Pesquisar</span>
+        </button>
+      </span>
+    </div>
+  </form>
 </div>
 
 <div class="filter">
@@ -26,7 +28,7 @@
   </div>
   <div class="col-lg-8 col-lg-offset-2 col-xs-12 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
     <div id="rankingListAll">
-      <%= render 'ranking_list' %>
+
     </div>
 
     <div id="share-buttons" align="center" class="row order-space text-center">

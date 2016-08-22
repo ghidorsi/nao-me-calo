@@ -29,16 +29,21 @@ class EstablishmentsController < ApplicationController
   end
 
   def ranking
-    if params[:search] != nil
-      @establishments = Establishment.search_by_city(params[:search])
-    elsif
-      @establishments = Establishment.all
+    if !params[:region].nil?
+      if !params[:region].empty?
+        @establishments = Establishment.search_for_ranking(params[:region])
+      elsif
+        @establishments = Establishment.all
+      end
     end
+
     @share_text = "Confira o ranking dos estabelecimentos mais ou menos amigáveis para grupos oprimidos"
 
-    @worst_places = generate_ranking
-    @best_places = @worst_places.reverse
-    @places = @best_places
+    if params[:order] == "good"
+      @places = generate_ranking.reverse
+    elsif params[:order] == "bad"
+      @places = generate_ranking
+    end
 
     respond_to do |format|
       if request.xhr?

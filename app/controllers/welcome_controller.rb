@@ -24,9 +24,9 @@ class WelcomeController < ApplicationController
 
 
     if request.xhr?
-      if params[:city].empty? && params[:type] == "good"
+      if params[:type] == "good"
         @places = generate_ranking.reverse.take(5)
-      elsif params[:city].empty? && params[:type] == "bad"
+      elsif params[:type] == "bad"
         @places = generate_ranking.take(5)
       end
 
