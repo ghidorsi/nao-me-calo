@@ -192,7 +192,6 @@ function initAutocomplete () {
 
     $('#text-without-javascript').hide();
     $('#bestPlacesButton').addClass('Order-btn-pressed');
-    $('#bestPlacesButton').css('font-size', '145%');
     openHeaderMobile();
 
     var isMobile = window.matchMedia("only screen and (max-width: 1199px)");

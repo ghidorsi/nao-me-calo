@@ -4,6 +4,9 @@ $(document).ready(function(){
   var order = "good";
   var size = 5;
 
+  $('#bestPlacesButtonRanking').addClass("Order-btn-pressed");
+  $('#bestPlacesButtonRanking').css('font-size', '145%');
+
   if(window.location.pathname == "/ranking"){
     sendAjaxRequestForRanking();
   }
