@@ -12,7 +12,7 @@
 
 .list-group{
   margin-right: -20px;
-  
+
   & a{
     color: #626363;
     text-decoration: none;
@@ -73,6 +73,10 @@ margin: 6px 12px 4px -4px;
   top: 3px;
   left: 10px;
   margin: 7px 17px -10px 0px;
+}
+
+.text-justify{
+  text-align: justify;
 }
 
 .arrow1-icon{

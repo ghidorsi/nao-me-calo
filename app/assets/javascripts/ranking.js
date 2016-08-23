@@ -24,4 +24,16 @@ $(document).ready(function(){
     size = size + 5;
     sendAjaxRequestForRanking();
   });
+
+  $('#bestPlacesButtonRanking').click(function(){
+    order = "good";
+    size = 5;
+    sendAjaxRequestForRanking();
+  });
+
+  $('#worstPlacesButtonRanking').click(function(){
+    order = "bad";
+    size = 5;
+    sendAjaxRequestForRanking();
+  })
 });
