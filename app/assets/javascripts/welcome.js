@@ -191,7 +191,6 @@ function initAutocomplete () {
     var type = "good";
 
     $('#text-without-javascript').hide();
-    $('#bestPlacesButton').addClass('Order-btn-pressed');
     openHeaderMobile();
 
     var isMobile = window.matchMedia("only screen and (max-width: 1199px)");
@@ -230,20 +229,6 @@ function initAutocomplete () {
     $("#upperFontSizeButton").click(upperFontSize);
 
     $("#lowerFontSizeButton").click(lowerFontSize);
-
-    $(".ranking-best").click(activeBestButton);
-
-    $(".ranking-worst").click(activeWorstButton);
-
-    function activeBestButton(){
-      $(".ranking-worst").removeClass("ranking-worst-active");
-      $(".ranking-best").addClass("ranking-best-active");
-    }
-
-    function activeWorstButton(){
-      $(".ranking-worst").addClass("ranking-worst-active");
-      $(".ranking-best").removeClass("ranking-best-active");
-    }
 
     function lowerFontSize(){
       var min = 14
@@ -286,19 +271,11 @@ function initAutocomplete () {
     $("#bestPlacesButton").click(function(){
       type = "good";
       sendAjaxRequestForWelcome();
-      $(this).addClass('Order-btn-pressed');
-      $(this).css('font-size', '145%');
-      $('#worstPlacesButton').removeClass('Order-btn-pressed');
-      $('#worstPlacesButton').css('font-size', '120%');
     });
 
     $("#worstPlacesButton").click(function(){
       type = "bad";
       sendAjaxRequestForWelcome();
-      $(this).addClass('Order-btn-pressed');
-      $(this).css('font-size', '145%');
-      $('#bestPlacesButton').removeClass('Order-btn-pressed');
-      $('#bestPlacesButton').css('font-size', '120%');
     });
 
     $('#placeId').attr('readonly', true)

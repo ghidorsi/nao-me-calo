@@ -1,10 +1,10 @@
 <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 
 <div class="search-Ranking">
-  <div align="center" class="row paragraph paragraph-title order-space h3">
+  <div align="center" class="size-h1 title-ranking">
     Ranking
   </div>
-  <div align="center" class="row paragraph h5">
+  <div align="center" class="row paragraph h5 padding-bottom-ranking">
     Sua opinião ajudou a identificar os melhores e piores lugares para grupos oprimidos.
   </div>
   <form action="#" id="rankingForm" method="get">
@@ -19,14 +19,14 @@
   </form>
 </div>
 
-<div class="filter">
-  <div class="row order-space">
+<div class="filter text-center">
+  <div class="row order-space text-center">
     Ordenar ranking por:
   </div>
   <div class="ranking-buttons text-center">
-    <a name="ranking" id='bestPlacesButtonRanking' ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Melhores</a>
-    <span> | </span>
-    <a id='worstPlacesButtonRanking' >Piores <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></a>
+    <a name="ranking" id='bestPlacesButtonRanking' class='a-without-underline'><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Melhores</a>
+    <span> / </span>
+    <a id='worstPlacesButtonRanking' class='a-without-underline'>Piores <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></a>
     </div>
   </div>
   <div class="col-lg-8 col-lg-offset-2 col-xs-12 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
@@ -35,7 +35,7 @@
     </div>
 
     <div align="center">
-      <a class="show-more-button" id="showMoreRanking">Ver mais</a>
+      <a class="show-more-button" id="showMoreRanking">Ver mais estabelecimentos</a>
     </div>
 
     <div id="share-buttons" align="center" class="row order-space text-center">
@@ -43,10 +43,10 @@
       <br>
       <div class="floated">
         <a href="http://www.facebook.com/sharer.php?u=http://naomecalotw-test.herokuapp.com/ranking" target="_blank">
-          <img class="large-square-share-button spacing-to-share-button" src="https://whatswp.com/wp-content/uploads/2014/04/sh-150x150.png" alt="Facebook" />
+          <img class="large-square-share-button" src="https://whatswp.com/wp-content/uploads/2014/04/sh-150x150.png" alt="Facebook" />
         </a>
         <a href="https://twitter.com/share?url=http://naomecalotw-test.herokuapp.com/ranking/&amp;text=<%= @share_text %>&amp;hashtags=naomecalo" target="_blank">
-          <img class="large-square-share-button" src="http://www.siamcomm.com/wp-content/uploads/2011/05/twitter.png" alt="Twitter" />
+          <img class="large-square-share-button space-between-shares" src="http://www.siamcomm.com/wp-content/uploads/2011/05/twitter.png" alt="Twitter" />
         </a>
       </div>
     </div>

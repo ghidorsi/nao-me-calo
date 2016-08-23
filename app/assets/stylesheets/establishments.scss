@@ -14,8 +14,13 @@
 
 .floated{
   font-size: 0px;
+  padding-top: 10px;
+  margin-left: -5px;
 }
 
+.space-between-shares{
+  margin-left: 10px;
+}
 
 .order-space{
   text-align: center;
@@ -151,4 +156,8 @@
   font-size: 120%;
   font-weight: bold;
   cursor: pointer;
+}
+
+.title-ranking{
+  margin-right: -34px;
 }

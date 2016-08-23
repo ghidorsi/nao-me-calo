@@ -40,7 +40,11 @@ li{
 
 .padding-bottom{
   padding-bottom: 20px !important;
+  &-ranking{
+    padding-bottom: 12px !important;
+  }
 }
+
 
 .center-element{
   margin:0 auto;
@@ -87,5 +91,8 @@ li{
 
 #buttons-enhance{
   margin: 0 0 2% 2%;
+}
 
+.a-without-underline{
+  text-decoration: none !important;
 }
