@@ -106,3 +106,13 @@ margin: 6px 12px 4px -4px;
       padding-left: 15px;
     }
   }
+
+@media only screen and (max-device-width: 480px){
+  .ul-mobile{
+    margin-left: -55px;
+  }
+
+  .help-list-style{
+    padding-left: 0px;
+  }
+}

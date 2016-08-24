@@ -3,36 +3,39 @@
   <div class="alert alert-success text-center"> <%= notice %> </div>
   <% end %>
   <div class="row">
-    <h2 class="size-h2 text-center">Contato</h2>
+    <h2 class="size-h1 text-center">Contato</h2>
   </div>
   <div class='row'>
     <div class="col-lg-offset-3 col-lg-6">
       <div class="form-group" id="form-contact">
         <%= form_tag("/enviar", :method => "post") do %>
-        <div class="field">
-          <b>São obrigatórios os campos com </b> <span class="red-text"> * </span>
+        <div class="field text-center">
+          <span> Fale com a equipe do Não Me Calo. Seu contato será respondido o mais breve possível. </span>
         </div>
-        <div class='field' id="nameAlertContact">
-          <%= label_tag 'Nome:' %>
-          <p id="nameAlertTextContact", class="hidden">Por favor, digite um nome válido.</p>
-          <%= text_field_tag :name, nil,:class => "form-control", aria: {label: "nome"}, id:"nameEvaluateContact"%>
-        </div>
-        <div class='field' id="emailAlertContact">
-          <%= label_tag 'E-mail:' %><span class="red-text"> *</span>
-          <p id="emailAlertTextContact", class="hidden">Por favor, digite um e-mail válido.</p>
-          <%= text_field_tag :email, nil,:class => "form-control", aria: {label: "email"}, id:"emailEvaluateContact" %>
-        </div>
-        <div class='field'>
-          <%= label_tag 'Assunto:' %>
-          <%= text_field_tag :subject, nil, :maxlength => 100, :class => "form-control", aria: {label: "Assunto"}, :id => "subjectContact"%>
-        </div>
-        <div class='field'id="messageAlert">
-          <%= label_tag 'Mensagem:' %><span class="red-text"> *</span>
-          <p id="messageAlertText", class="hidden">Por favor, digite uma mensagem.</p>
-          <p id="messageAlertTextObscenity", class="hidden alertText">Seu texto contém palavras ofensivas, por favor corrija</p>
-          <%= text_area_tag :message, nil, :maxlength => 500, :class => "form-control text-area", rows: 5 , aria: {label: "Mensagem"}, id:"messageEvaluate"%>
+        <div class="row">
+          <div class='field' id="nameAlertContact">
+            <%= label_tag 'Nome:' %>
+            <p id="nameAlertTextContact", class="hidden">Por favor, digite um nome válido.</p>
+            <%= text_field_tag :name, nil,:class => "form-control", aria: {label: "nome"}, id:"nameEvaluateContact"%>
+          </div>
+          <div class='field' id="emailAlertContact">
+            <%= label_tag 'E-mail:' %><span class="red-text"> *</span>
+            <p id="emailAlertTextContact", class="hidden">Por favor, digite um e-mail válido.</p>
+            <%= text_field_tag :email, nil,:class => "form-control", aria: {label: "email"}, id:"emailEvaluateContact" %>
+          </div>
+          <div class='field'>
+            <%= label_tag 'Assunto:' %>
+            <%= text_field_tag :subject, nil, :maxlength => 100, :class => "form-control", aria: {label: "Assunto"}, :id => "subjectContact"%>
+          </div>
+          <div class='field'id="messageAlert">
+            <%= label_tag 'Mensagem:' %><span class="red-text"> *</span>
+            <p id="messageAlertText", class="hidden">Por favor, digite uma mensagem.</p>
+            <p id="messageAlertTextObscenity", class="hidden alertText">Seu texto contém palavras ofensivas, por favor corrija</p>
+            <%= text_area_tag :message, nil, :maxlength => 500, :class => "form-control text-area", rows: 5 , aria: {label: "Mensagem"}, id:"messageEvaluate"%>
+          </div>
         </div>
         <span id="limitCharContact">Caracteres restantes: 500</span>
+        <span style="padding-left: 38%;"> <b>São obrigatórios os campos com </b> <span class="red-text"> * </span></span>
         <script>
         var badwords = <%= get_bad_word.inspect.html_safe %>;
         </script>
