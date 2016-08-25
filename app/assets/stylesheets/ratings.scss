@@ -280,5 +280,6 @@ input[type="radio"]:checked + .rating-excellent {
 @media only screen and (max-device-width: 480px){
   .rating{
     width: 55px;
+    margin-top: 9px;
   }
 }
