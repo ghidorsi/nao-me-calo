@@ -16,22 +16,27 @@
 */
 @import "_variables.scss";
 
-.align-footer{
-  padding-bottom: 5.4%;
-}
-
-body {
-  display: table;
+* {
+  margin: 0;
 }
 
 body, html {
-  height: 100%;
-  width: 100%;
-  position:relative;
+  height: 84%
 }
 
 li{
   list-style-type: none;
+}
+
+.wrapper{
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+.push{
+  height: 4em;
 }
 
 .align-rating {

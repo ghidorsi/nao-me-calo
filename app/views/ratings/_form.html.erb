@@ -15,47 +15,46 @@
   <p id="alert" class="text-center">Erro, os campos com * são obrigatórios!</p>
 </div>
 
-  <p class="ratings-subtitle text-center">Avalie de acordo com o acontecimento como o local tratou o(s) grupo(s) abaixo:</p>
+<p class="ratings-subtitle text-center">Avalie de acordo com o acontecimento como o local tratou o(s) grupo(s) abaixo:</p>
 
 <input type="hidden" id="placeId" name="placeId" value="<%= @placeId %>" readonly="readyonly">
 <div class="col-lg-6 padding-bottom rating-box">
-  <span class="red-text align-rating">Não é necessário marcar todos*</span>
   <br>
   <br>
-  <div class="col-lg-12 no-padding-left" id="radio-button_id">
+  <div class="col-lg-12 no-padding-left margin-top-form" id="radio-button_id">
     <div class="field">
       <%= f.label 'Mulher', :class => "text-style-radios" %>
       <div class ="row paragraph-ratings">
-        <span alt="Daremos notas no estabelecimento, de um a cinco. Um para péssimo, dois para ruim, três para regular, quatro para bom, cinco para ótimo.">
+        <span alt="Daremos notas no estabelecimento, de um a cinco. Um para Deve Melhorar, dois para Pode Melhorar, três para regular, quatro para bom, cinco para ótimo.">
           <ul class="ratings">
             <li class="rating">
-              <%= f.radio_button :woman, "1", :class => "radio-button", aria: {label: "Péssimo"}  %>
+              <%= f.radio_button :woman, "1", :class => "radio-button", aria: {label: "Deve Melhorar"}  %>
               <%= f.label :woman, :class => "rating-dangerous", :value => "1" do %>
-              <span class="radio-text">Péssimo</span>
+              <span class="radio-text">Deve Melhorar</span>
               <% end %>
             </li>
             <li class="rating">
-              <%= f.radio_button :woman, "2", :class => "radio-button", aria: {label: "Ruim"}  %>
+              <%= f.radio_button :woman, "2", :class => "radio-button", aria: {label: "Pode Melhorar"}  %>
               <%= f.label :woman, :class => "rating-bad", :value => "2", :id => "rate_test" do %>
-              <span class="radio-text">Ruim</span>
+              <span class="radio-text">Pode Melhorar</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :woman, "3", :class => "radio-button", aria: {label: "Regular"}  %>
               <%= f.label :woman, :class => "rating-regular", :value => "3" do %>
-              <span class="radio-text">Regular</span>
+              <span class="radio-text one-line">Regular</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :woman, "4", :class => "radio-button", aria: {label: "Bom"}  %>
               <%= f.label :woman, :class => "rating-good", :value => "4" do %>
-              <span class="radio-text">Bom</span>
+              <span class="radio-text one-line">Bom</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :woman, "5", :class => "radio-button", aria: {label: "Ótimo"}  %>
               <%= f.label :woman, :class => "rating-excellent", :value => "5" do %>
-              <span class="radio-text">Ótimo</span>
+              <span class="radio-text one-line">Ótimo</span>
               <%end%>
             </li>
           </ul>
@@ -65,42 +64,42 @@
       <div class="field">
         <%= f.label 'LGBTQIA', :class => "text-style-radios text-uppercase" %>
         <% if browser.chrome?%>
-          <span class="info-icon" data-toggle="tooltip" data-placement="right" title="Lésbicas, Gays, Bissexuais, Transgêneros, Travestis, Queer, Intersexuais, Assexuais e/ou Simpatizantes"></span>
+        <span class="info-icon" data-toggle="tooltip" data-placement="right" title="Lésbicas, Gays, Bissexuais, Transgêneros, Travestis, Queer, Intersexuais, Assexuais e/ou Simpatizantes"></span>
         <%else%>
-          <span data-toggle="tooltip" data-placement="right" title="Lésbicas, Gays, Bissexuais, Transgêneros, Travestis, Queer, Intersexuais, Assexuais e/ou Simpatizantes">
+        <span data-toggle="tooltip" data-placement="right" title="Lésbicas, Gays, Bissexuais, Transgêneros, Travestis, Queer, Intersexuais, Assexuais e/ou Simpatizantes">
           <img id="info-icon" class="information-icon" src="../assets/information-icon.png"/>
         </span>
         <%end%>
         <div class ="row paragraph-ratings">
           <ul class="ratings">
             <li class="rating">
-              <%= f.radio_button :lgbtqia, "1", :class => "radio-button", aria: {label: "Péssimo"}  %>
+              <%= f.radio_button :lgbtqia, "1", :class => "radio-button", aria: {label: "Deve Melhorar"}  %>
               <%= f.label :lgbtqia, :class => "rating-dangerous", :value => "1" do %>
-              <span class="radio-text">Péssimo</span>
+              <span class="radio-text">Deve Melhorar</span>
               <% end %>
             </li>
             <li class="rating">
-              <%= f.radio_button :lgbtqia, "2", :class => "radio-button", aria: {label: "Ruim"}  %>
+              <%= f.radio_button :lgbtqia, "2", :class => "radio-button", aria: {label: "Pode Melhorar"}  %>
               <%= f.label :lgbtqia, :class => "rating-bad", :value => "2" do %>
-              <span class="radio-text">Ruim</span>
+              <span class="radio-text">Pode Melhorar</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :lgbtqia, "3", :class => "radio-button", aria: {label: "Regular"}  %>
               <%= f.label :lgbtqia, :class => "rating-regular", :value => "3" do %>
-              <span class="radio-text">Regular</span>
+              <span class="radio-text one-line">Regular</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :lgbtqia, "4", :class => "radio-button", aria: {label: "Bom"}  %>
               <%= f.label :lgbtqia, :class => "rating-good", :value => "4" do %>
-              <span class="radio-text">Bom</span>
+              <span class="radio-text one-line">Bom</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :lgbtqia, "5", :class => "radio-button", aria: {label: "Ótimo"}  %>
               <%= f.label :lgbtqia, :class => "rating-excellent", :value => "5" do %>
-              <span class="radio-text">Ótimo</span>
+              <span class="radio-text one-line">Ótimo</span>
               <%end%>
             </li>
           </ul>
@@ -112,33 +111,33 @@
         <div class ="row paragraph-ratings">
           <ul class="ratings">
             <li class="rating">
-              <%= f.radio_button :race, "1", :class => "radio-button", aria: {label: "Péssimo"}  %>
+              <%= f.radio_button :race, "1", :class => "radio-button", aria: {label: "Deve Melhorar"}  %>
               <%= f.label :race, :class => "rating-dangerous", :value => "1" do %>
-              <span class="radio-text">Péssimo</span>
+              <span class="radio-text">Deve Melhorar</span>
               <% end %>
             </li>
             <li class="rating">
-              <%= f.radio_button :race, "2", :class => "radio-button", aria: {label: "Ruim"}  %>
+              <%= f.radio_button :race, "2", :class => "radio-button", aria: {label: "Pode Melhorar"}  %>
               <%= f.label :race, :class => "rating-bad", :value => "2" do %>
-              <span class="radio-text">Ruim</span>
+              <span class="radio-text">Pode Melhorar</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :race, "3", :class => "radio-button", aria: {label: "Regular"}  %>
               <%= f.label :race, :class => "rating-regular", :value => "3" do %>
-              <span class="radio-text">Regular</span>
+              <span class="radio-text one-line">Regular</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :race, "4", :class => "radio-button", aria: {label: "Bom"}  %>
               <%= f.label :race, :class => "rating-good", :value => "4" do %>
-              <span class="radio-text">Bom</span>
+              <span class="radio-text one-line">Bom</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :race, "5", :class => "radio-button", aria: {label: "Ótimo"}  %>
               <%= f.label :race, :class => "rating-excellent", :value => "5" do %>
-              <span class="radio-text">Ótimo</span>
+              <span class="radio-text one-line">Ótimo</span>
               <%end%>
             </li>
           </ul>
@@ -150,33 +149,33 @@
         <div class ="row paragraph-ratings">
           <ul class="ratings">
             <li class="rating">
-              <%= f.radio_button :disability, "1", :class => "radio-button", aria: {label: "Péssimo"}  %>
+              <%= f.radio_button :disability, "1", :class => "radio-button", aria: {label: "Deve Melhorar"}  %>
               <%= f.label :disability, :class => "rating-dangerous", :value => "1" do %>
-              <span class="radio-text">Péssimo</span>
+              <span class="radio-text">Deve Melhorar</span>
               <% end %>
             </li>
             <li class="rating">
-              <%= f.radio_button :disability, "2", :class => "radio-button", aria: {label: "Ruim"}  %>
+              <%= f.radio_button :disability, "2", :class => "radio-button", aria: {label: "Pode Melhorar"}  %>
               <%= f.label :disability, :class => "rating-bad", :value => "2" do %>
-              <span class="radio-text">Ruim</span>
+              <span class="radio-text">Pode Melhorar</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :disability, "3", :class => "radio-button", aria: {label: "Regular"}  %>
               <%= f.label :disability, :class => "rating-regular", :value => "3" do %>
-              <span class="radio-text">Regular</span>
+              <span class="radio-text one-line">Regular</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :disability, "4", :class => "radio-button", aria: {label: "Bom"}  %>
               <%= f.label :disability, :class => "rating-good", :value => "4" do %>
-              <span class="radio-text">Bom</span>
+              <span class="radio-text one-line">Bom</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :disability, "5", :class => "radio-button", aria: {label: "Ótimo"}  %>
               <%= f.label :disability, :class => "rating-excellent", :value => "5" do %>
-              <span class="radio-text">Ótimo</span>
+              <span class="radio-text one-line">Ótimo</span>
               <%end%>
             </li>
           </ul>
@@ -187,33 +186,33 @@
         <div class ="row paragraph-ratings">
           <ul class="ratings">
             <li class="rating">
-              <%= f.radio_button :elder, "1", :class => "radio-button", aria: {label: "Péssimo"}  %>
+              <%= f.radio_button :elder, "1", :class => "radio-button", aria: {label: "Deve Melhorar"}  %>
               <%= f.label :elder, :class => "rating-dangerous", :value => "1" do %>
-              <span class="radio-text">Péssimo</span>
+              <span class="radio-text">Deve Melhorar</span>
               <% end %>
             </li>
             <li class="rating">
-              <%= f.radio_button :elder, "2", :class => "radio-button", aria: {label: "Ruim"}  %>
+              <%= f.radio_button :elder, "2", :class => "radio-button", aria: {label: "Pode Melhorar"}  %>
               <%= f.label :elder, :class => "rating-bad", :value => "2" do %>
-              <span class="radio-text">Ruim</span>
+              <span class="radio-text">Pode Melhorar</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :elder, "3", :class => "radio-button", aria: {label: "Regular"}  %>
               <%= f.label :elder, :class => "rating-regular", :value => "3" do %>
-              <span class="radio-text">Regular</span>
+              <span class="radio-text one-line">Regular</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :elder, "4", :class => "radio-button", aria: {label: "Bom"}  %>
               <%= f.label :elder, :class => "rating-good", :value => "4" do %>
-              <span class="radio-text">Bom</span>
+              <span class="radio-text one-line">Bom</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :elder, "5", :class => "radio-button", aria: {label: "Ótimo"}  %>
               <%= f.label :elder, :class => "rating-excellent", :value => "5" do %>
-              <span class="radio-text">Ótimo</span>
+              <span class="radio-text one-line">Ótimo</span>
               <%end%>
             </li>
           </ul>
@@ -224,41 +223,44 @@
         <div class ="row paragraph-ratings">
           <ul class="ratings">
             <li class="rating">
-              <%= f.radio_button :obese, "1", :class => "radio-button", aria: {label: "Péssimo"}  %>
+              <%= f.radio_button :obese, "1", :class => "radio-button", aria: {label: "Deve Melhorar"}  %>
               <%= f.label :obese, :class => "rating-dangerous", :value => "1" do %>
-              <span class="radio-text">Péssimo</span>
+              <span class="radio-text">Deve Melhorar</span>
               <% end %>
             </li>
             <li class="rating">
-              <%= f.radio_button :obese, "2", :class => "radio-button", aria: {label: "Ruim"}  %>
+              <%= f.radio_button :obese, "2", :class => "radio-button", aria: {label: "Pode Melhorar"}  %>
               <%= f.label :obese, :class => "rating-bad", :value => "2" do %>
-              <span class="radio-text">Ruim</span>
+              <span class="radio-text">Pode Melhorar</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :obese, "3", :class => "radio-button", aria: {label: "Regular"}  %>
               <%= f.label :obese, :class => "rating-regular", :value => "3" do %>
-              <span class="radio-text">Regular</span>
+              <span class="radio-text one-line">Regular</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :obese, "4", :class => "radio-button", aria: {label: "Bom"}  %>
               <%= f.label :obese, :class => "rating-good", :value => "4" do %>
-              <span class="radio-text">Bom</span>
+              <span class="radio-text one-line">Bom</span>
               <%end%>
             </li>
             <li class="rating">
               <%= f.radio_button :obese, "5", :class => "radio-button", aria: {label: "Ótimo"}  %>
               <%= f.label :obese, :class => "rating-excellent", :value => "5" do %>
-              <span class="radio-text">Ótimo</span>
+              <span class="radio-text one-line">Ótimo</span>
               <%end%>
             </li>
           </ul>
         </div>
       </div>
-      <div>
+      <div class="alert-not-needed">
+        <span class="align-rating">Não é necessário marcar todos*</span>
+      </div>
+      <div class="margin-talk-to-us">
         <b>
-          Se acha que está faltando algum grupo, <a href="/faleconosco">mande uma mensagem para nós</a>
+          Não encontrou o grupo ao qual você pertence? <a href="/faleconosco">Mande uma mensagem para nós.</a>
         </b>
         <br>
         <br>
@@ -268,69 +270,70 @@
   </div>
 
   <div class="rating-box col-lg-6">
-    <b>São obrigatórios os campos com</b> <span class="red-text"> *</span>
-    <br>
-    <br>
+    <h4><b>Seus Dados:</h4>
     <div class="form-group">
       <div id="nameAlert" class="field has-mask">
         <%= f.label "nome" %>
         <p id="nameAlertText", class="hidden">Por favor, digite um nome válido.</p>
         <%= f.text_field :name, :class => "form-control form-textfield", :id => "nameEvaluate", aria: {label: "Nome"} %>
       </div>
-    <div id="cpfAlert", class="field has-mask padding-top">
-      <%= f.label "CPF",  :class => "text-uppercase"%><span class="red-text"> *</span>
-      <% if browser.chrome?%>
-        <span class="info-icon" data-toggle="tooltip" data-placement="right" title="Precisamos armazenar seu CPF por 6 meses de acordo com o Marco Civil da Internet"></span>
-      <%else%>
-        <span data-toggle="tooltip" data-placement="right" title="Precisamos armazenar seu CPF por 6 meses de acordo com o Marco Civil da Internet">
+      <div id="cpfAlert", class="field has-mask padding-top">
+        <%= f.label "CPF",  :class => "text-uppercase"%><span class="red-text"> *</span>
+        <% if browser.chrome?%>
+        <span class="info-icon" data-toggle="tooltip" data-placement="right" title="Precisamos armazenar seu CPF por 6 meses, de acordo com o Marco Civil da Internet. Não se preocupe, manteremos seu anonimato, guardando seus dados com segurança."></span>
+        <%else%>
+        <span data-toggle="tooltip" data-placement="right" title="PPrecisamos armazenar seu CPF por 6 meses, de acordo com o Marco Civil da Internet. Não se preocupe, manteremos seu anonimato, guardando seus dados com segurança.">
           <img id="info-icon" class="information-icon" src="../assets/information-icon.png"/>
         </span>
-      <%end%>
-      <p id="cpfAlertText", class="hidden">Por favor, digite um CPF válido.</p>
-      <%= f.text_field :cpf, :class => "form-control form-textfield", :id => "cpfEvaluate", aria: {label: "cpf"}  %>
-    </div>
-    <div class="field padding-top">
-      <%= f.label "E-mail"%>
-      <p id="emailAlertText", class="hidden">Por favor, digite um e-mail válido.</p>
-      <%= f.text_field :email, :class => "form-control form-textfield", :id => "emailEvaluate", aria: {label: "email"}  %>
-    </div>
-    <div class="field has-mask padding-top">
-      <%= f.label "telefone"%>
-      <%= f.text_field :phone, :class => "form-control form-textfield", :id => "phoneEvaluate", aria: {label: "Telefone"}  %>
-    </div>
-    <div  id="dateAlert" class="field has-mask padding-top" >
-      <%= f.label 'Data do Acontecimento' %><span class="red-text"> *</span>
-      <% if browser.chrome?%>
+        <%end%>
+        <p id="cpfAlertText", class="hidden">Por favor, digite um CPF válido.</p>
+        <%= f.text_field :cpf, :class => "form-control form-textfield", :id => "cpfEvaluate", aria: {label: "cpf"}  %>
+      </div>
+      <div class="field padding-top">
+        <%= f.label "E-mail"%>
+        <p id="emailAlertText", class="hidden">Por favor, digite um e-mail válido.</p>
+        <%= f.text_field :email, :class => "form-control form-textfield", :id => "emailEvaluate", aria: {label: "email"}  %>
+      </div>
+      <div class="field has-mask padding-top">
+        <%= f.label "telefone"%>
+        <%= f.text_field :phone, :class => "form-control form-textfield", :id => "phoneEvaluate", aria: {label: "Telefone"}  %>
+      </div>
+      <div  id="dateAlert" class="field has-mask padding-top" >
+        <%= f.label 'Data do Acontecimento' %><span class="red-text"> *</span>
+        <% if browser.chrome?%>
         <span class="info-icon" data-toggle="tooltip" data-placement="right" title="Neste campo você deve preencher com a data em que ocorreu o fato"></span>
-      <%else%>
-      <span data-toggle="tooltip" data-placement="right" title="Neste campo você deve preencher com a data em que ocorreu o fato">
-        <img id="info-icon" class="information-icon" src="../assets/information-icon.png"/>
-      </span>
-      <%end%>
-      <!-- <div class ="row paragraph-ratings"> -->
-      <p id="dateAlertText", class="hidden alertText">Por favor, digite uma data válida.</p>
-      <%= f.text_field :rating_date, :id => "dateEvaluate", selected: Date.today, min: 5.months.ago, max: 0.day.from_now, :class => "form-control form-textfield", aria: {label: "Data do evento"} %>
+        <%else%>
+        <span data-toggle="tooltip" data-placement="right" title="Neste campo você deve preencher com a data em que ocorreu o fato">
+          <img id="info-icon" class="information-icon" src="../assets/information-icon.png"/>
+        </span>
+        <%end%>
+        <!-- <div class ="row paragraph-ratings"> -->
+        <p id="dateAlertText", class="hidden alertText">Por favor, digite uma data válida.</p>
+        <%= f.text_field :rating_date, :id => "dateEvaluate", selected: Date.today, min: 5.months.ago, max: 0.day.from_now, :class => "form-control form-textfield", aria: {label: "Data do evento"} %>
+      </div>
+    </div>
+    <div class="obligatory-fields">
+      <b>São obrigatórios os campos com</b> <span class="red-text"> *</span>
     </div>
   </div>
-</div>
 
-<div class="col-lg-12">
-  <div id="descriptionAlert", class="field has-mask">
-    <div class="field padding-top align-rating" >
-      <%= f.label "Descrição do relato" %>
-      <p id="descriptionAlertText", class="hidden alertText">Seu texto contém palavras ofensivas, por favor corrija</p>
-      <%= f.text_area :description, rows: 5, :maxlength => 500, :class => "form-control", :id => "ratingDescription", aria: {label: "Descrição"}  %>
-      <span id="limitChar">Caracteres restantes: 500</span>
+  <div class="col-lg-12">
+    <div id="descriptionAlert", class="field has-mask">
+      <div class="field padding-top align-rating" >
+        <%= f.label "Descrição do relato" %>
+        <p id="descriptionAlertText", class="hidden alertText">Seu texto contém palavras ofensivas, por favor corrija</p>
+        <%= f.text_area :description, rows: 5, :maxlength => 500, :class => "form-control", :id => "ratingDescription", aria: {label: "Descrição"}  %>
+        <span id="limitChar">Caracteres restantes: 500</span>
+      </div>
+    </div>
+    <div class='field text-center'>
+      <input type="checkbox" name="accepted_terms" id="terms" unchecked>
+      <label for="terms">Aceito os <a href="/termos" target="_blank">termos e condições de uso.</a></label>
+    </div>
+    <div class="actions text-center">
+      <%= f.submit 'Enviar avaliação', :class => "btn buttons-style submit-button-size", :id => "submitButton", aria: {label: "Botão de enviar"} %>
     </div>
   </div>
-  <div class='field text-center'>
-    <input type="checkbox" name="accepted_terms" id="terms" unchecked>
-    <label for="terms">Aceito os <a href="/termos" target="_blank">termos e condições de uso.</a></label>
-  </div>
-  <div class="actions text-center">
-    <%= f.submit 'Enviar avaliação', :class => "btn buttons-style submit-button-size", :id => "submitButton", aria: {label: "Botão de enviar"} %>
-  </div>
-</div>
 
   <script>
 

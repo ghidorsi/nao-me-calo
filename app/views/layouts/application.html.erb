@@ -10,25 +10,25 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
 
   <% if params[:controller] == 'establishments' && params[:action] == 'ranking'%>
-    <link rel="canonical" href="http://naomecalotw-test.herokuapp.com/">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:title" content="Ranking de estabelecimentos" >
-    <meta property="og:site_name" content="Nao me calo">
-    <meta property="og:url" content="http://naomecalotw-test.herokuapp.com/ranking/" >
-    <meta property="og:description" content="Confira o ranking dos estabelecimentos mais ou menos amigáveis para grupos oprimidos" >
-    <meta property="og:image" content="" >
-    <meta property="og:type" content="website" >
-    <meta property="og:locale" content="pt_BR" >
+  <link rel="canonical" href="http://naomecalotw-test.herokuapp.com/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:title" content="Ranking de estabelecimentos" >
+  <meta property="og:site_name" content="Nao me calo">
+  <meta property="og:url" content="http://naomecalotw-test.herokuapp.com/ranking/" >
+  <meta property="og:description" content="Confira o ranking dos estabelecimentos mais ou menos amigáveis para grupos oprimidos" >
+  <meta property="og:image" content="" >
+  <meta property="og:type" content="website" >
+  <meta property="og:locale" content="pt_BR" >
   <% else %>
-    <link rel="canonical" href="http://naomecalotw-test.herokuapp.com/">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:title" content="<%= !@rating.nil? ? !@rating.establishment.nil? ? @rating.establishment.name : 'Não Me Calo' : 'Nao Me Calo'%>" >
-    <meta property="og:site_name" content="Nao me calo">
-    <meta property="og:url" content="<%= !@rating.nil? ? !@rating.establishment.nil? ? 'http://naomecalotw-test.herokuapp.com/relato/'+@rating.id.to_s+'' : 'http://naomecalotw-test.herokuapp.com/' : 'http://naomecalotw-test.herokuapp.com/' %>" >
-    <meta property="og:description" content="<%= !@rating.nil? ? @rating.description : 'Conheça o site Não Me Calo' %>" >
-    <meta property="og:image" content="" >
-    <meta property="og:type" content="website" >
-    <meta property="og:locale" content="pt_BR" >
+  <link rel="canonical" href="http://naomecalotw-test.herokuapp.com/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:title" content="<%= !@rating.nil? ? !@rating.establishment.nil? ? @rating.establishment.name : 'Não Me Calo' : 'Nao Me Calo'%>" >
+  <meta property="og:site_name" content="Nao me calo">
+  <meta property="og:url" content="<%= !@rating.nil? ? !@rating.establishment.nil? ? 'http://naomecalotw-test.herokuapp.com/relato/'+@rating.id.to_s+'' : 'http://naomecalotw-test.herokuapp.com/' : 'http://naomecalotw-test.herokuapp.com/' %>" >
+  <meta property="og:description" content="<%= !@rating.nil? ? @rating.description : 'Conheça o site Não Me Calo' %>" >
+  <meta property="og:image" content="" >
+  <meta property="og:type" content="website" >
+  <meta property="og:locale" content="pt_BR" >
   <% end %>
 
 
@@ -37,22 +37,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <% if params[:controller] == 'welcome' && params[:action] == 'index'%>
+  <div class="header">
+    <% if params[:controller] == 'welcome' && params[:action] == 'index'%>
     <%= render 'layouts/header_home' %>
-  <% else %>
+    <% else %>
     <%= render 'layouts/header_small' %>
-  <% end %>
+    <% end %>
+  </div>
+  <div class="wrapper">
 
-  <section>
-    <div id="buttons-enhance">
-      <%= submit_tag "A+", :class =>"btn btn-warning form-group", :id =>"upperFontSizeButton" %>
-      <%= submit_tag "A-", :class =>"btn btn-warning form-group", :id =>"lowerFontSizeButton" %>
-    </div>
-    <div class="container-fluid">
-      <%= yield %>
-    </divthub>
-  </section>
-  <%= render 'layouts/footer' %>
+    <section>
+      <div id="buttons-enhance">
+        <%= submit_tag "A+", :class =>"btn btn-warning form-group", :id =>"upperFontSizeButton" %>
+        <%= submit_tag "A-", :class =>"btn btn-warning form-group", :id =>"lowerFontSizeButton" %>
+      </div>
+      <div class="container-fluid">
+        <%= yield %>
+      </divthub>
+    </section>
+    <div class="push"></div>
+  </div>
+  <div class="footer">
+    <%= render 'layouts/footer' %>
+  </div>
 </body>
 </html>

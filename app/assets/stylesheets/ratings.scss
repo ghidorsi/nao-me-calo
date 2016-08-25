@@ -135,10 +135,9 @@
   font-family: Arial;
   font-size: 12px;
   position: absolute;
-  white-space: nowrap;
   width: 60px;
-  height: 26px;
-  top: -1px;;
+  min-height: 39px;
+  top: -5px;
   margin-right: 3px;
   &:hover {
     color: white;
@@ -254,4 +253,26 @@ input[type="radio"]:checked + .rating-excellent {
 
 #ratingDescription{
       width: 82%;
+}
+
+.margin-talk-to-us{
+  margin-top: 11px;
+}
+
+.one-line{
+  margin-top: 10px !important;
+}
+
+.alert-not-needed{
+  margin-left: -15px;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.margin-top-form{
+  margin-top: -42px;
+}
+
+.obligatory-fields{
+  font-size: 10px;
 }
