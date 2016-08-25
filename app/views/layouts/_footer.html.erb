@@ -2,27 +2,29 @@
 <div class="hidden-xs visible-sm visible-md visible-lg">
   <nav class="footer-desktop">
     <div id="container" style="clear:both;">
-      <div class="align-footer-left">
-        <ul class="list-style">
-          <li><%= link_to "Home", "/", :class => "a-without-underline" %></li>
-          <li><%= link_to "Apoio Legal", dicas_path, :class => "a-without-underline"%></li>
-          <li><%= link_to "Ranking", ranking_path, :class => "a-without-underline"%></li>
-          <li><%= link_to "Contato", faleconosco_path, :class => "a-without-underline"%></li>
-          <li><%= link_to "Quem somos", sobre_nos_path, :class => "a-without-underline" %></li>
-          <li><a href="#" class="a-without-underline">FAQ</a></li>
-          <li><a href="#" class="a-without-underline">Termos de Uso</a></li>
-        </ul>
-      </div>
       <div class="align-footer-center">
-        <div class="row">
-          Compartilhe o site nas redes sociais
+        <div class="div-menu-footer">
+          <%= link_to "Home", "/", :class => "a-without-underline-footer" %><span> | </span>
+          <%= link_to "Apoio Legal", dicas_path, :class => "a-without-underline-footer"%><span> | </span>
+          <%= link_to "Ranking", ranking_path, :class => "a-without-underline-footer"%><span> | </span>
+          <%= link_to "Contato", faleconosco_path, :class => "a-without-underline-footer"%><span> | </span>
+          <%= link_to "Quem somos", sobre_nos_path, :class => "a-without-underline-footer" %><span> | </span>
+          <a href="#" class="a-without-underline-footer">FAQ</a><span> | </span>
+          <a href="#" class="a-without-underline-footer">Termos de Uso</a>
         </div>
-        <a class="spacing-to-share-button" href="http://www.facebook.com/sharer.php?u=http://naomecalotw-test.herokuapp.com/" target="_blank">
-          <img class="small-square-share-button facebook-icon" src="https://whatswp.com/wp-content/uploads/2014/04/sh-150x150.png" alt="Facebook"  />
-        </a>
-        <a href="https://twitter.com/share?url=http://naomecalotw-test.herokuapp.com/&amp;text=<%= @share_aplication_text %>&amp;hashtags=naomecalo" target="_blank">
-          <img class="small-square-share-button" src="http://www.siamcomm.com/wp-content/uploads/2011/05/twitter.png" alt="Twitter"  />
-        </a>
+        <div class="share">
+          <div class="row">
+            Compartilhe o site nas redes sociais
+          </div>
+          <div class="share-buttons">
+            <a class="spacing-to-share-button" href="http://www.facebook.com/sharer.php?u=http://naomecalotw-test.herokuapp.com/" target="_blank">
+              <img class="small-square-share-button facebook-icon" src="https://whatswp.com/wp-content/uploads/2014/04/sh-150x150.png" alt="Facebook"  />
+            </a>
+            <a href="https://twitter.com/share?url=http://naomecalotw-test.herokuapp.com/&amp;text=<%= @share_aplication_text %>&amp;hashtags=naomecalo" target="_blank">
+              <img class="small-square-share-button" src="http://www.siamcomm.com/wp-content/uploads/2011/05/twitter.png" alt="Twitter"  />
+            </a>
+          </div>
+        </div>
         <%@share_aplication_text = "Conheça o site Não me Calo"%>
       </div>
       <div id="align-footer-right">
