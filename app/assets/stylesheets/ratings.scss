@@ -252,7 +252,7 @@ input[type="radio"]:checked + .rating-excellent {
 }
 
 #ratingDescription{
-      width: 82%;
+  width: 82%;
 }
 
 .margin-talk-to-us{
@@ -275,4 +275,10 @@ input[type="radio"]:checked + .rating-excellent {
 
 .obligatory-fields{
   font-size: 10px;
+}
+
+@media only screen and (max-device-width: 480px){
+  .rating{
+    width: 55px;
+  }
 }
