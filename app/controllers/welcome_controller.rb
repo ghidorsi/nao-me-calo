@@ -17,7 +17,7 @@ class WelcomeController < ApplicationController
       if establishment.has_more_than_2_ratings?
         @establishment_hash[establishment] = establishment.calculate_average
         @color_and_rating = get_color_and_pin_concept(@establishment_hash[establishment])
-        @pinsForMap << [establishment.name, establishment.lat.to_f, establishment.lng.to_f, @color_and_rating[0], establishment.id, @color_and_rating[1], set_average_style(@color_and_rating[1]), establishment.has_more_than_2_ratings?]
+        @pinsForMap << [establishment.name, establishment.lat.to_f, establishment.lng.to_f, @color_and_rating[0], establishment.id, @color_and_rating[1], set_average_style(@color_and_rating[1]), establishment.has_more_than_2_ratings?, set_average_margin_top(@color_and_rating[1])]
       end
     end
     @share_text = "Confira o ranking dos estabelecimentos mais ou menos amigáveis para grupos oprimidos"

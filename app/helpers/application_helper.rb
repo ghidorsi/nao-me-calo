@@ -20,6 +20,8 @@ module ApplicationHelper
   def set_average_margin_top(average)
     if average == "Deve Melhorar" || average == "Pode Melhorar"
       return "margin-top-label-ranking"
+    else
+      return ""
     end
   end
 
