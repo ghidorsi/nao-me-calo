@@ -39,8 +39,6 @@
   }
 }
 
-
-
 .hold-link-title-help {
   & a{
     color: #000;
@@ -94,6 +92,11 @@ margin: 6px 12px 4px -4px;
 .abuse-article{
   display:none;
 }
+
+.span-obrigatory{
+  padding-left: 38% !important;
+}
+
 @media all and (max-width: 2048px) {
   .help-list-style{
     padding-left: 0px;
@@ -119,5 +122,9 @@ margin: 6px 12px 4px -4px;
   .abuse-article{
     display: none;
     margin-left: 12px;
+  }
+
+  .span-obrigatory{
+    display: block;
   }
 }

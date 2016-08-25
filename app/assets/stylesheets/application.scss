@@ -91,3 +91,14 @@ li{
 .a-without-underline{
   text-decoration: none !important;
 }
+
+.span-obrigatory{
+  margin-left: 26% !important;
+  margin-top: -13px;
+}
+
+@media only screen and (max-device-width: 480px){
+  .span-obrigatory{
+    display: block;
+  }
+}
