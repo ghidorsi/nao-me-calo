@@ -21,9 +21,9 @@ module Concept
   def determine_concept(rating)
     case rating
     when 1 ... 1.8
-      rating_concept = "Péssimo"
+      rating_concept = "Deve Melhorar"
     when 1.8 ... 2.6
-      rating_concept = "Ruim"
+      rating_concept = "Pode Melhorar"
     when 2.6 ... 3.4
       rating_concept = "Regular"
     when 3.4 ... 4.2

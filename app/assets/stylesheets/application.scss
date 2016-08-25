@@ -102,8 +102,16 @@ li{
   margin-top: -19px;
 }
 
+.margin-top-label-ranking{
+  margin-top: -8px;
+}
+
 @media only screen and (max-device-width: 480px){
   .span-obrigatory{
     display: block;
+  }
+
+  .margin-top-label-ranking-show{
+    margin-top: -12px
   }
 }

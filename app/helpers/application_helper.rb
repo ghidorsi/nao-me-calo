@@ -2,9 +2,9 @@ module ApplicationHelper
 
   def set_average_style(average)
     case average
-    when "Péssimo"
+    when "Deve Melhorar"
       return 'concept-dangerous'
-    when "Ruim"
+    when "Pode Melhorar"
       return 'concept-bad'
     when "Regular"
       return 'concept-regular'
@@ -14,6 +14,12 @@ module ApplicationHelper
       return 'concept-excellent'
     else
       return nil
+    end
+  end
+
+  def set_average_margin_top(average)
+    if average == "Deve Melhorar" || average == "Pode Melhorar"
+      return "margin-top-label-ranking"
     end
   end
 

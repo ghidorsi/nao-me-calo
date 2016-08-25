@@ -12,7 +12,11 @@
 
         <div class="hidden-xs visible-sm visible-md visible-lg"> <!--div desktop -->
           <span class="col-lg-2">
-            <% if @rating_concept != nil %> <label class="flag-establishment concept concept-pointer-nill-events  <%= set_average_style(@rating_concept) %>"><%= @rating_concept %></label><% end %>
+            <% if @rating_concept != nil %> <label class="flag-establishment concept concept-pointer-nill-events  <%= set_average_style(@rating_concept) %>">
+              <div class="<%= set_average_margin_top(@rating_concept) %>-show">
+                <%= @rating_concept %>
+              </div>
+            </label><% end %>
           </span>
         </div>
       </h1>
@@ -22,7 +26,11 @@
         <div class="visible-xs hidden-sm hidden-md hidden-lg text-center"> <!--div mobile -->
           <span class="col-lg-2">
           </h1>
-          <% if @rating_concept != nil %> <label class="flag-establishment concept concept-pointer-nill-events  <%= set_average_style(@rating_concept) %>"><%= @rating_concept %></label><% end %>
+          <% if @rating_concept != nil %> <label class="flag-establishment concept concept-pointer-nill-events  <%= set_average_style(@rating_concept) %>">
+            <div class="<%= set_average_margin_top(@rating_concept) %>-show">
+              <%= @rating_concept %>
+            </div>
+          </label><% end %>
         </span>
       </div>
     </div>
@@ -51,11 +59,15 @@
           <div div class="visible-xs hidden-sm hidden-md hidden-lg"> <!--div mobile -->
             <span class="text-field col-xs-8 evaluate-date-mobile"><b>Data da avaliação:</b> <%= returning_date(rating[0])%></span>
           </div>
-          <p class="text-right"><label class="concept concept-pointer-nill-events <%= set_average_style(rating[1]) %>"><%= rating[1] %></label></p>
+          <label class="concept concept-pointer-nill-events <%= set_average_style(rating[1]) %>">
+            <div class="<%= set_average_margin_top(@rating_concept) %>">
+              <%= rating[1] %>
+            </div>
+          </label>
           <% if checking_if_rating_is_visible(rating[0])  %>
-            <%= render partial: 'rating_visible', locals: {rating: rating[0]} %>
+          <%= render partial: 'rating_visible', locals: {rating: rating[0]} %>
           <%else%>
-            <%= render partial: 'rating_not_visible', locals: {rating: rating[0]} %>
+          <%= render partial: 'rating_not_visible', locals: {rating: rating[0]} %>
           <%end%>
         </h4>
       </li>

@@ -28,9 +28,9 @@ class Establishment < ActiveRecord::Base
     rate_array = []
     ratings.each do |rating|
       if rating.average_rating < 1.8
-        rate_array.push([rating,"Péssimo"])
+        rate_array.push([rating,"Deve Melhorar"])
       elsif rating.average_rating < 2.6
-        rate_array.push([rating,"Ruim"])
+        rate_array.push([rating,"Pode Melhorar"])
       elsif rating.average_rating < 3.4
         rate_array.push([rating,"Regular"])
       elsif rating.average_rating < 4.2
