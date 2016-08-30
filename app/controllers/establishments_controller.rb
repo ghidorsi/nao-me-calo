@@ -37,6 +37,8 @@ class EstablishmentsController < ApplicationController
       end
     end
 
+    # Things used for share
+    @region = params[:region]
     @share_text = "Confira o ranking dos estabelecimentos mais ou menos amigáveis para grupos oprimidos"
 
     if params[:order] == "good"

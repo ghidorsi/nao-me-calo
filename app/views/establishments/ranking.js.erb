@@ -1,5 +1,6 @@
 <% if !@places.empty? %>
   $('#rankingListAll').html("<%= escape_javascript render 'ranking_list' %>");
+  $('#share').html("<%= escape_javascript render 'share' %>")
   $('#showMoreRanking').show();
   $('.filter').show();
   $('#share-buttons').show();

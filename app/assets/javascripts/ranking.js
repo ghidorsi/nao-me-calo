@@ -4,6 +4,11 @@ $(document).ready(function(){
   var order = "good";
   var size = 5;
 
+  if(window.location.search != null){
+    region = window.location.search.replace("?region=", "");
+    $('#searchRanking').val(region);
+  }
+
   if(window.location.pathname == "/ranking"){
     sendAjaxRequestForRanking();
   }
