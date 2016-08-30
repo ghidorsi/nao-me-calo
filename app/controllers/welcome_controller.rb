@@ -52,6 +52,9 @@ class WelcomeController < ApplicationController
   def terms
   end
 
+  def faq
+  end
+
   private
 
   def set_client

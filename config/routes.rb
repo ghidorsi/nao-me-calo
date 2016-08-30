@@ -30,6 +30,8 @@ Rails.application.routes.draw do
 
   get '/sobre_nos' => 'about_us#about_us'
 
+  get '/faq' => 'welcome#faq'
+
   post '/enviar' => 'contact_us#send_mail'
 
   get '/relato/:id' => 'ratings#show'
