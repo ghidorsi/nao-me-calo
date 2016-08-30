@@ -5,7 +5,7 @@ $(document).ready(function(){
   var size = 5;
 
   if(window.location.search != null){
-    region = window.location.search.replace("?region=", "").replace("+", " ");
+    region = window.location.search.replace("?region=", "").split("+").join(" ");
     $('#searchRanking').val(region);
   }
 
