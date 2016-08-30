@@ -29,16 +29,18 @@ class EstablishmentsController < ApplicationController
   end
 
   def ranking
+
+    @region = ""
     if !params[:region].nil?
       if !params[:region].empty?
         @establishments = Establishment.search_for_ranking(params[:region])
+        @region = params[:region].gsub! " ", "+"
       elsif
         @establishments = Establishment.all
       end
     end
 
     # Things used for share
-    @region = params[:region]
     @share_text = "Confira o ranking dos estabelecimentos mais ou menos amigáveis para grupos oprimidos"
 
     if params[:order] == "good"
