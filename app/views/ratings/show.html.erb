@@ -35,10 +35,10 @@
         <% if checking_if_rating_is_visible(@rating)  %>
         <p class="address-padding breakline"><%= description_exists(@rating) ? "Relato: " + @rating.description : "Esta avaliação não possui relato." %></p>
         <div id="share-buttons" align="right">
-          <a href="http://www.facebook.com/sharer.php?u=http://naomecalotw-test.herokuapp.com/relato/<%= @rating.id %>" target="_blank">
+          <a href="http://www.facebook.com/sharer.php?u=https://naomecalo.org/relato/<%= @rating.id %>" target="_blank">
             <img class ="small-square-share-button share-buttons-color" src="https://whatswp.com/wp-content/uploads/2014/04/sh-150x150.png" alt="Facebook" />
           </a>
-          <a href="https://twitter.com/share?url=http://naomecalotw-test.herokuapp.com/relato/<%=@rating.id %>/&amp;text=<%= @rating.description.slice(0..80)%> ... &amp;hashtags=naomecalo" target="_blank">
+          <a href="https://twitter.com/share?url=https://naomecalo.org/relato/<%=@rating.id %>/&amp;text=<%= @rating.description.slice(0..80)%> ... &amp;hashtags=naomecalo" target="_blank">
             <img class ="small-square-share-button share-buttons-color" src="http://www.siamcomm.com/wp-content/uploads/2011/05/twitter.png" alt="Twitter" />
           </a>
         </div>
